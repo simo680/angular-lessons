@@ -14,9 +14,9 @@ export class AppComponent {
   number = 6;
   array = [1, 2, 3, 4, 5]
   users = [
-    {id: 1, name: 'Alex', age: 19},
+    {id: 1, name: 'Alex', age: 18},
     {id: 2, name: 'Steven', age: 19},
-    {id: 3, name: 'Dima', age: 19},
-    {id: 4, name: 'Neena', age: 19},
+    {id: 3, name: 'Dima', age: 17},
+    {id: 4, name: 'Neena', age: 15},
   ]
 }

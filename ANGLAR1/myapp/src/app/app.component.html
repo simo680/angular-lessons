@@ -1,20 +1,42 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div
+  [class]="name"
+  [style.color]="number > 9 ? 'red' : 'green'"
+  [id]="'elem_+number'"
+>
+  {{ title }}
 
-<style>
+  <!-- <h2 *ngIf="number < 10">Hello Angular!</h2> -->
 
-</style>
+  @if (number < 10) {
+  <h2>Hello Angular!</h2>
+  } @else {
+  <h2>Test Value</h2>
+  }
 
-<main class="main">
- <h1>Hello!</h1>
-</main>
+  <!-- <ul>
+    <li *ngFor="let elem of array; let i = index">
+      {{ elem }}
+    </li>
+  </ul> -->
 
+  <ul>
+    @for (elem of array; track $index) {
+    <li>{{ elem }}</li>
+    {{
+      $index
+    }}
+    } @empty {
+    <li>empty</li>
+    }
+  </ul>
 
+  <ul>
+    @for (user of users; track user.id) {
+    <li>
+      {{ user.name }}
+    </li>
+    }
+  </ul>
+</div>
 
-<router-outlet />
+<h3></h3>
