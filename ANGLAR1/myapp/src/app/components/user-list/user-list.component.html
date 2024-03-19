@@ -1,0 +1,15 @@
+<h2 class="user-list">
+  <p>user-list works!</p>
+  <ul>
+    @for (user of users; track user.id) {
+    <li>
+      {{ user.name }}
+    </li>
+    }
+  </ul>
+  <!-- Картинки -->
+  <img width="300" src="/assets/bear.jpg" alt="bear">
+  <img [src]="srcImage" alt="">
+  <p>isShow = {{ isShow }}</p>
+  <p>name = {{ name }}</p>
+</h2>

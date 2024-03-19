@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { UserListComponent } from './components/user-list/user-list.component';
+import { NumberComponent } from './components/number/number.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, UserListComponent, NumberComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -12,7 +14,8 @@ export class AppComponent {
   title = 'myapp';
   name = 'wrapper';
   number = 6;
-  array = [1, 2, 3, 4, 5]
+  isShow = false;
+  array = [1, 2, 3, 4, 5];
   users = [
     {id: 1, name: 'Alex', age: 18},
     {id: 2, name: 'Steven', age: 19},
