@@ -4,6 +4,7 @@ import { PipeExampleComponent } from './components/pipe-example/pipe-example.com
 import { FormDataComponent } from './components/form-data/form-data.component';
 import { EventDataComponent } from './components/event-data/event-data.component';
 import { UserListComponent } from './components/user-list/user-list.component';
+import { UserCardComponent } from './components/user-card/user-card.component';
 
 @Component({
   selector: 'app-root',
